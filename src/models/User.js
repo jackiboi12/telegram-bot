@@ -22,14 +22,15 @@ const userSchema = mongoose.Schema(
     username: {
       type: String,
       required: true,
+      unique:true,
     },
     promptTokens: {
       type: Number,
-      default: 0, // Default value
+      required: false, // Default value
     },
     completionTokens: {
       type: Number,
-      default: 0, // Default value
+      required: false, // Default value
     },
   },
   { timestamps: true }
